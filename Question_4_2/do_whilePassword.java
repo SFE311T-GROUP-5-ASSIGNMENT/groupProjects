@@ -3,8 +3,27 @@ import javax.swing.*;
 
 public class do_whilePassword {
     public static void main(String[] args) {
-        String choice =""; do{
-            //System.out.println("Enter today's number from the menu"); there was no indenting choice has been properly indented into line 8  
-        choice = JOptionPane.showInputDialog("Please enter in a password");
-        }while(choice != "John");} //Extra curly brace deleted
+        String choice = "";
+        String choice1 = "";
+        int count = 0;
+        String password = "John"; 
+        do{
+            
+            count = count + 1;
+            choice = JOptionPane.showInputDialog("Please enter password");
+            choice1 = choice;
+
+            if (password.equals(choice1) == false && count < 3){
+                System.out.println(choice1 + " is incorrect try again.");
+                //JOptionPane.showInputDialog("Incorrect passord. Please enter password");
+                //choice1 = choice;
+            }
+            else if (count == 3){
+                System.out.println("You have entered a wrong password 3 times, your password is " + password);
+                choice = JOptionPane.showInputDialog("Please enter a new password");
+                break;
+            }
+        }while(password.equals(choice1)==false);
+        System.out.println("Access Granted");
+    }
 }
