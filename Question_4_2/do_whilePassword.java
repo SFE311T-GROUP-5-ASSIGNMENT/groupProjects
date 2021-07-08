@@ -20,10 +20,17 @@ public class do_whilePassword {
             }
             else if (count == 3){
                 System.out.println("You have entered a wrong password 3 times, your password is " + password);
-                choice = JOptionPane.showInputDialog("Please enter a new password");
+                choice = JOptionPane.showInputDialog("You have entered a wrong password 3 times, your password was " + password + ". Please enter a new password");
                 break;
             }
         }while(password.equals(choice1)==false);
-        System.out.println("Access Granted");
+
+        if(choice1.equals(password)){
+            System.out.println("Access Granted");
+        }
+        else{
+            System.out.println("Password Changed");
+        }
+        
     }
 }
