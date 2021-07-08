@@ -1,4 +1,8 @@
-for i in range(20):
-    sum[i]
+myList = [100 ,4 ,200 ,1 ,3 ,2,5]
+myList.sort()
+consecutives = []
 
-print(sum)
+for i in range(len(myList)):
+    if myList[i] == myList[i - 1] + 1:
+       consecutives.append(myList[i])
+print(consecutives)
