@@ -1,11 +1,15 @@
-myList = [100,4,200,1,3,2,5]
-myList.sort()
-consecutives = []
-count = 0
+def longestConsecutive(listOfNums):
+    
+    listOfNums.sort()
+    consecutives = []
+    count = 0
 
-for i in range(len(myList)):
-    #if myList[i - 1] <= myList[i]:
-    if (myList[i] - myList[i-1]) == 1 or (myList[i] - myList[i-1]) == -1 or myList[i] <= myList[i-1]:
-       consecutives.append(myList[i])
-       count = count + 1
-print(consecutives)
+    for i in range(len(listOfNums)):
+        if (listOfNums[i] - listOfNums[i-1]) == 1 or (listOfNums[i] - listOfNums[i-1]) == -1 or listOfNums[i] <= listOfNums[i-1] and listOfNums[i] != listOfNums[i-1]  :
+            consecutives.append(listOfNums[i])
+            count = count + 1
+    return count
+
+myList = [0, 3, 7, 2, 5, 8, 4, 6, 0, 1]
+longestCount = longestConsecutive(myList)
+print(f'The count of the longest consecutive values is {longestCount}')
