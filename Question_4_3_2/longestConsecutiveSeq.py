@@ -5,8 +5,7 @@ def longestConsecutive(listOfNums):
     count = 0
 
     for i in range(len(listOfNums)):
-        if (listOfNums[i] - listOfNums[i-1]) == 1 or (listOfNums[i] - listOfNums[i-1]) == -1 or listOfNums[i] <= listOfNums[i-1] and listOfNums[i] != listOfNums[i-1]  :
-            consecutives.append(listOfNums[i])
+        if (listOfNums[i] - listOfNums[i-1]) == 1 or (listOfNums[i] - listOfNums[i-1]) == -1 or listOfNums[i] <= listOfNums[i-1] and listOfNums[i] != listOfNums[i-1]:
             count = count + 1
     return count
 
