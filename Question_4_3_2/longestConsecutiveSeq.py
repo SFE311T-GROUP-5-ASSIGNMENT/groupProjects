@@ -14,13 +14,13 @@ def longestConsecutive(listOfNums):
         if (listOfNums[i] - listOfNums[i-1]) == 1 or (listOfNums[i] - listOfNums[i-1]) == -1 or listOfNums[i] <= listOfNums[i-1] and listOfNums[i] != listOfNums[i-1]:
             #Updating the counter
             permutation_counter = permutation_counter + 1
-    #returning the number of permutations found
+    #returning the number of consecutive valuesfound
     return permutation_counter
 
 if __name__ == '__main__':
-    #Permutation list to be checked
+    #list to be checked for consecutives
     myList = [0, 3, 7, 2, 5, 8, 4, 6, 0, 1]
-    #permutation function call
+    #longest consecutive function call
     longestCount = longestConsecutive(myList)
-    #pringind out the number of permutations found
+    #printing out the number of consecutives found
     print(f'The count of the longest consecutive values is {longestCount}')
