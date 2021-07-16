@@ -5,7 +5,8 @@ def nextPermutations(myList):
         if myList[i] < myList[i + 1]:
             index = i
     if index == -1:
-        nextPermutationList = myList.sort()    
+        myList.sort()
+        return myList    
     else:   
         for j in range(listLen -1, index, -1):
             if myList[j] > myList[index]:
