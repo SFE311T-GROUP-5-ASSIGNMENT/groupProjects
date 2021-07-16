@@ -14,6 +14,5 @@ def nextPermutations(myList):
                 nextPermutationList = myList[:index+1] + list(reversed(myList[index+1:]))
                 break
     return nextPermutationList
-
 myList = [1,2,3]
 print(nextPermutations(myList))
